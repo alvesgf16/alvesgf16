@@ -1,7 +1,7 @@
 ### Hi there! I'm Gabriel Alves. 👋
 
 - 🔭 I’m not currently working.
-- 🌱 I’m currently learning JavaScript ES6.
+- 🌱 I’m currently learning React.
 - 😄 Pronouns: He/him
 
 <div>
