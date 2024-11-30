@@ -4,7 +4,7 @@ Hi there! I'm Gabriel Alves.![](https://user-images.githubusercontent.com/183505
 - 🔭 I’m not currently working.
 - 🌱 I’m currently learning Software Development.
 - 😄 Pronouns: He/him
-<hr>
+<hr></hr>
 
 <h3 align="center">Connect with me:</h3>
 <p align="center">
@@ -127,8 +127,4 @@ Hi there! I'm Gabriel Alves.![](https://user-images.githubusercontent.com/183505
   <a href="https://github.com/alvesgf16">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=alvesgf16&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=alvesgf16&layout=compact&langs_count=7&theme=tokyonight"/>
-</div>
- 
-  ![Snake animation](https://github.com/alvesgf16/alvesgf16/blob/output/github-contribution-grid-snake.svg)
- 
 </div>
