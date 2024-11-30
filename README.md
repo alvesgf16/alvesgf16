@@ -2,7 +2,7 @@ Hi there! I'm Gabriel Alves.![](https://user-images.githubusercontent.com/183505
 =====================================================================================================================================
 
 - 🔭 I’m not currently working.
-- 🌱 I’m currently learning Python.
+- 🌱 I’m currently learning Software Development.
 - 😄 Pronouns: He/him
 <hr>
 
