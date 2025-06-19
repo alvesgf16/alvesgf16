@@ -1,8 +1,8 @@
 Hi there! I'm Gabriel Alves.![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)
 =====================================================================================================================================
 
-- 🔭 I’m not currently working.
-- 🌱 I’m currently learning Software Development.
+- 🔭 I'm not currently working.
+- 🌱 I'm currently learning Software Development.
 - 😄 Pronouns: He/him
 <hr></hr>
 
