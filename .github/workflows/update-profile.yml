@@ -1,0 +1,51 @@
+name: Update Profile README with Latest Learning
+
+on:
+  repository_dispatch:
+    types: [learning-update]
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout profile repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository_owner }}/${{ github.repository_owner }}
+
+      - name: Get latest learning commit
+        id: get-commit
+        run: |
+          # Get the latest commit from learning-journal repo
+          LATEST_COMMIT=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository_owner }}/learning-journal/commits?per_page=1")
+          
+          # Extract tech name from conventional commit format
+          COMMIT_MESSAGE=$(echo "$LATEST_COMMIT" | jq -r '.[0].commit.message')
+          TECH_NAME=$(echo "$COMMIT_MESSAGE" | sed -n 's/^\([^:]*\):.*/\1/p')
+          
+          echo "tech_name=$TECH_NAME" >> $GITHUB_OUTPUT
+          echo "Found tech: $TECH_NAME"
+
+      - name: Update README
+        run: |
+          TECH_NAME="${{ steps.get-commit.outputs.tech_name }}"
+          
+          # Update the "I'm currently learning" sentence
+          sed -i "s/🌱 I'm currently learning.*/🌱 I'm currently learning **$TECH_NAME**/" README.md
+          
+          echo "Updated learning status to: $TECH_NAME"
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add README.md
+            git commit -m "🤖 Auto-update: Currently learning ${{ steps.get-commit.outputs.tech_name }}"
+            git push
+          fi
